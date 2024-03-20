@@ -1,13 +1,12 @@
 from __future__ import with_statement
 
-import os
+from logging.config import fileConfig
 
 from alembic import context
 from sqlalchemy import engine_from_config, pool
-from logging.config import fileConfig
+
 from app.core.config import settings
 from app.db.models import base
-
 from app.db.models.user import User
 
 # this is the Alembic Config object, which provides

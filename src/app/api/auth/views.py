@@ -1,16 +1,10 @@
-from datetime import timedelta
-from typing import Annotated, Any
-
-from fastapi import APIRouter, Depends, HTTPException
+from typing import Annotated
+from fastapi import APIRouter, Depends
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
-
-from app.api.auth.model import Token
 from app.api.auth import service
-from app.api.user.models import UserOut
+from app.api.auth.model import Token
 from app.db.service.session import get_db
-from app.core import security
-
 
 router = APIRouter()
 
@@ -28,11 +22,3 @@ def login_access_token(
     )
 
     return token
-
-
-# @router.post("/auth/test-token", response_model=UserOut)
-# def test_token(current_user: CurrentUser) -> Any:
-#     """
-#     Test access token
-#     """
-#     return current_user

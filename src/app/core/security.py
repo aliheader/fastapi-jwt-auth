@@ -1,6 +1,5 @@
-from datetime import timedelta, datetime
+from datetime import datetime, timedelta
 from typing import Any, Union
-
 from fastapi import HTTPException
 from jose import JWTError, jwt
 from passlib.context import CryptContext

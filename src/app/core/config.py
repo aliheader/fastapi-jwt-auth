@@ -1,9 +1,7 @@
 import os
 import secrets
-from typing import Any, Dict, List, Optional, Union
 from dotenv import load_dotenv
 from sqlalchemy.engine import url
-from pydantic import AnyHttpUrl, EmailStr, HttpUrl, PostgresDsn, validator, BaseModel
 
 load_dotenv()
 

@@ -1,8 +1,7 @@
-from fastapi import HTTPException
+from sqlalchemy.orm import Session
+from app.api.user import models
 from app.core.security import get_hashed_password
 from app.db.models.user import User
-from app.api.user import models
-from sqlalchemy.orm import Session
 
 
 def get_user(session: Session, username: str) -> User:

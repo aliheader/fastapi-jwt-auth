@@ -1,8 +1,7 @@
 """Database session handling."""
 
-from sqlalchemy.orm import sessionmaker, Session
+from sqlalchemy.orm import sessionmaker
 from app.db.service.engine import engine
-
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
